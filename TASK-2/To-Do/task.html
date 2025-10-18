@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do DOM Javascript</title>
+</head>
+<body>
+    <style>
+         * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100%;
+            width: 50%;
+            padding: 5px;
+            margin: 10% 0px 0px 20%;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .container h2 {
+            margin-bottom: 10px;
+        }
+        #box {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin-top: 10px;
+        }
+        .inputRow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .inputTask {
+            height: 40px;
+            width: 80%;
+        }
+        .btn {
+            margin-left: 10px;
+            height: 40px;
+            width: 80px;
+            background-color: aqua;
+            color: black;
+            border-radius: 8px;
+            border: none;
+        }
+        li {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            margin-bottom: 5px;
+        }
+        .deleteBtn {
+            background-color: rgb(241, 72, 106);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+
+
+
+
+    <div class="container">
+       <h2>To-Do List</h2>
+    <div class="inputRow">
+        <input type="text" placeholder="Add task" id="name" class="inputTask">
+        <button class="btn" onclick="addTask()">Add</button>
+    
+        <button class="deleteBtn" id="dltTemp" style="display:none;">Delete</button>
+    </div>
+        <ul id="box"></ul>
+    </div>
+    
+
+    <script>
+        function addTask() {
+            let box = document.getElementById("box");
+            let input = document.getElementById("name");
+            let dltTemp = document.getElementById("dltTemp");
+            let task = input.value.trim();
+
+            let li = document.createElement("li");
+            li.textContent = task;
+
+            let delbtn = dltTemp.cloneNode(true);
+            delbtn.style.display = "inline-block";
+            delbtn.removeAttribute("id");
+
+            delbtn.onclick = function() {
+                box.removeChild(li);
+
+            };
+            li.appendChild(delbtn);
+
+            box.appendChild(li);
+
+            input.value = "";
+            
+        }
+
+    </script>
+</body>
+</html>

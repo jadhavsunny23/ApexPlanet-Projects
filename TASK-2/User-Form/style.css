@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    height: 750px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgb(164, 116, 81) 0%, rgb(156, 152, 129) 16.667%, rgb(115, 160, 157) 33.333%, rgb(59, 137, 154) 50%, rgb(9, 91, 121) 66.667%, rgb(0, 40, 71) 83.333%, rgb(0, 1, 22) 100%);
+}
+
+.col-md-3{
+    height: 500px;
+    width: 50%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+.table{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.form-control {
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    width: 300px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.button {
+   
+    height: 20px;
+    width: 410px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.btn-user{
+    height: 35px;
+    width: 100px;
+    margin-top: 20px;
+    background-color: rgb(255, 147, 101);
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/*For tablets and smaller laptops*/
+@media (max-width: 992px) {
+    .col-md-3 {
+        width: 70%;
+        height: 500px;
+    }
+
+    .form-control {
+        width: 250px;
+    }
+
+    .table {
+        font-size: 16px;
+    }
+
+    .btn-user {
+        width: 90px;
+        font-size: 15px;
+    }
+}
+
+/*For mobile phones*/
+@media (max-width: 600px) {
+    .main {
+        height: 750px;
+        padding: 20px 0;
+    }
+
+    .col-md-3 {
+        width: 95%;
+        height: 630px;
+        padding: 15px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .table {
+        width: 100%;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .table tr {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .table td {
+        width: 100%;
+    }
+
+    .form-control {
+        width: 100%;
+        font-size: 14px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-user {
+        width: 100%;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+}

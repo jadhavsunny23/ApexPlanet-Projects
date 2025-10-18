@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div>
+    <div class="main">
+        
+
+        <div class="col-md-3">
+            <div class="head"><center>
+            <h2 style="color: rgb(230, 104, 51);font-size: 34px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bolder; text-decoration: underline;">User Form</h2>
+            <center>
+        </div>
+            <form name="mForm" method="post" onsubmit="return formValidate()">
+                <table class="table">
+                <tr>
+                    <td>
+                        First Name :
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="ufname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name :
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="ulname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Age :
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="uage">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mobile No :
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="unumber">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email :
+                    </td>
+                    <td>
+                        <input type="email" class="form-control" name="uemail" placeholder="e.g., abc@yahoo.com">
+                    </td>
+                </tr>
+
+                <tr class="button">
+                    <td><button class="btn-user" onclick="onClick()" >Submit</td>
+                </tr>
+    
+                </table>
+            </form>
+
+        </div>
+    </div>
+</div>  
+</body>
+</html>
