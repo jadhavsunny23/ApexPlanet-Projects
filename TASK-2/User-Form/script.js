@@ -26,14 +26,13 @@ function formValidate() {
         alert("All Fields are mandatory. Please enter Mobile No.");
         return false;
     }
-    if(mail == "") {
-        alert("All Fields are mandatory. Please enter Email.");
+    if(!mail.includes("@")) {
+        alert("Email format is incorrect. Please include '@' in your email.");
         return false;
     }
  
     
+    alert("Data is Succesfully Submitted.");
+    return true;
     
 }
-function onClick() {
-        alert("User Data is Submitted.");
-    }
