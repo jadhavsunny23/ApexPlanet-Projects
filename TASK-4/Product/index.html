@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <div class="start">
+      <h2>Product Page</h2>
+
+      <div class="search">
+        <div class="filter">
+          <label for="filter-select">Filter:</label>
+          <select id="filter-select">
+            <option value="all">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Home">Home</option>
+            <option value="Beauty">Beauty</option>
+          </select>
+        </div>
+
+        <div class="filter-price">
+          <label for="price-filter">Price:</label>
+          <select id="price-filter">
+            <option value="all">All Prices</option>
+            <option value="low">Below ₹1000</option>
+            <option value="mid">₹1000 - ₹5000</option>
+            <option value="high">Above ₹5000</option>
+          </select>
+        </div>
+
+        <div class="sortrating">
+          <label for="sort-rating">Sort by Rating:</label>
+          <select id="sort-rating">
+            <option value="default">Default</option>
+            <option value="high">High to Low</option>
+            <option value="low">Low to High</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-main" id="product-container">
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
