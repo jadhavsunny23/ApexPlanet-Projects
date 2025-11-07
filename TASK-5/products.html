@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SRJ-Shop — Products</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">SRJ-Shop</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="cart-link" href="cart.html">Cart (<span id="navCount">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls">
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products">
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+      <div class="sort">
+        <label for="sortSelect">Sort:</label>
+        <select id="sortSelect">
+          <option value="default">Default</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <h2>All Products</h2>
+      <div id="productGrid" class="grid" role="list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© SRJ-Shop</small>
+    </div>
+  </footer>
+</body>
+</html>

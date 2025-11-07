@@ -1,0 +1,129 @@
+
+:root{
+  --bg:#f5f6f8;
+  --card:#ffffff;
+  --muted:#7b8087;
+  --accent:#6b7280;     
+  --accent-2:#9ca3af;   
+  --accent-3:#f8fafc;    
+  --highlight:#ffd166;   
+  --maxw:1100px;
+  --radius:12px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; background: linear-gradient(0deg,var(--bg),#fff); }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 1rem; }
+
+/* Header */
+.site-header {
+  background: linear-gradient(90deg, rgba(107,114,128,0.06), transparent);
+  backdrop-filter: blur(2px);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; }
+.logo { font-weight: 700; letter-spacing: 0.2px; text-decoration: none; color: var(--accent); font-size: 1.25rem; }
+.site-header nav a { margin-left: 0.9rem; text-decoration: none; color: var(--muted); padding: 0.4rem; border-radius: 8px; }
+.site-header nav a.active,
+.site-header nav a:hover { background: var(--accent-3); color: var(--accent); }
+
+/* Hero */
+.hero {
+  padding: 2.2rem 1rem;
+  text-align: center;
+  background: linear-gradient(180deg,#fff,#fbfdff);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(15,23,42,0.04);
+  margin: 1rem 0;
+}
+.hero h1 { margin: 0; font-size: 1.8rem; color: var(--accent); }
+.hero p { color: var(--muted); margin: 0.6rem 0 1rem; }
+.hero-actions { display: flex; gap: 0.6rem; justify-content: center; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(15,23,42,0.06);
+  background: transparent;
+  cursor: pointer;
+}
+.btn.primary { background: var(--accent); color: white; border: none; }
+.btn.secondary { background: transparent; border: 2px dashed var(--accent-2); }
+
+/* Grid & cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 0.8rem;
+  box-shadow: 0 6px 24px rgba(15,23,42,0.04);
+  display: flex;
+  flex-direction: column;
+}
+.card img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; }
+.card h4 { margin: 0.6rem 0 0.3rem; font-size: 1rem; color: var(--accent); }
+.card .price { font-weight: 700; margin-top: auto; color: var(--muted); }
+.actions { display: flex; gap: 0.5rem; margin-top: 0.7rem; }
+
+/* Highlights */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.highlights .card p { color: var(--muted); }
+
+/* Product controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+.search { display: flex; gap: 0.5rem; align-items: center; }
+.search input, .search select { padding: 0.55rem; border-radius: 10px; border: 1px solid var(--accent-2); min-width: 220px; }
+.sort select { padding: 0.45rem; border-radius: 8px; border: 1px solid var(--accent-2); }
+
+/* Cart */
+.cart-container { display: flex; flex-direction: row; gap: 1rem; flex-wrap: wrap; }
+.cart-list { list-style: none; padding: 0; margin: 0; flex: 1; min-width: 260px; }
+.cart-list li { display: flex; gap: 0.8rem; padding: 0.6rem; border-bottom: 1px solid #f1f3f5; align-items: center; }
+.cart-list img { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; }
+.cart-summary {
+  min-width: 260px;
+  background: linear-gradient(180deg,#fff,#fbfdff);
+  padding: 0.8rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.04);
+}
+.total { margin-top: 0.5rem; font-size: 1.1rem; }
+.cart-actions { display: flex; gap: 0.6rem; margin-top: 0.8rem; }
+
+/* Forms */
+.contact-form { display: grid; gap: 0.6rem; max-width: 640px; }
+.contact-form label { display: block; font-weight: 600; color: var(--muted); }
+.contact-form input, .contact-form textarea { width: 100%; padding: 0.6rem; border-radius: 8px; border: 1px solid var(--accent-2); }
+
+/* Footer */
+.site-footer { padding: 1rem 0; text-align: center; color: var(--muted); margin-top: 2rem; }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.4rem; }
+  .site-header nav { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+  .card img { height: 200px; }
+}

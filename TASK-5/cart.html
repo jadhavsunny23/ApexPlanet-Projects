@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SRJ-Shop — Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">SRJ-Shop</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="cart-link" href="cart.html">Cart (<span id="navCount">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Your Cart</h2>
+      <div id="cartContainer" class="cart-container">
+        <ul id="cartList" class="cart-list"></ul>
+        <div class="cart-summary">
+          <div><strong>Subtotal:</strong> ₹<span id="subtotal">0.00</span></div>
+          <div><strong>Shipping:</strong> ₹<span id="shipping">49.00</span></div>
+          <div class="total"><strong>Total:</strong> ₹<span id="total">0.00</span></div>
+          <div class="cart-actions">
+            <button id="clearCart" class="btn">Clear Cart</button>
+            <button id="checkout" class="btn primary">Checkout (Demo)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© SRJ-Shop</small>
+    </div>
+  </footer>
+</body>
+</html>
